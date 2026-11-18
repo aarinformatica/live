@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#05070d">
+  <title>Abertura Cinematográfica</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="world"></div>
+
+  <div id="cinematic-hud">
+
+    <div class="topline">
+      <div class="brand">SYSTEM / BROADCAST</div>
+
+      <div class="live-indicator">
+        <span class="live-dot" id="liveDot"></span>
+        <span id="status">SISTEMA ONLINE</span>
+      </div>
+    </div>
+
+    <div class="prelive-message" id="preliveMessage">
+      <span class="eyebrow">PREPARAÇÃO DA TRANSMISSÃO</span>
+      <h2>A LIVE JÁ VAI COMEÇAR</h2>
+      <p>Estamos preparando tudo para você.</p>
+    </div>
+
+    <div class="center-title" id="mainTitle">
+      <span class="eyebrow">TRANSMISSÃO INICIADA</span>
+      <h1>ESTAMOS AO VIVO</h1>
+      <p>Obrigado por estar aqui.</p>
+    </div>
+
+    <div class="caption" id="caption"></div>
+
+    <div class="bottom-panel">
+      <div class="countdown-box">
+        <div class="countdown-label">
+          INÍCIO DA TRANSMISSÃO EM
+        </div>
+
+        <div id="countdown">05:00</div>
+
+        <div class="progress-track">
+          <div id="progress"></div>
+        </div>
+
+        <div class="progress-label">
+          <span id="progressText">PREPARANDO TRANSMISSÃO</span>
+          <span id="percentage">100%</span>
+        </div>
+      </div>
+
+      <div class="help">
+        <div><strong>ESPAÇO</strong> — INICIAR TRANSMISSÃO</div>
+        <div><strong>R</strong> — REINICIAR CONTAGEM</div>
+        <div class="system-footer">AMBIENTE EM TEMPO REAL</div>
+      </div>
+    </div>
+
+    <button id="audioHint" type="button">
+      <span class="audio-icon">♫</span>
+      <span id="audioHintText">CLIQUE PARA ATIVAR O ÁUDIO</span>
+    </button>
+
+    <div class="screen-vignette"></div>
+  </div>
+
+  <div id="errorScreen" aria-live="polite">
+    <div class="error-card">
+      <div class="error-mark">!</div>
+      <h2>Não foi possível iniciar o cenário 3D</h2>
+      <p id="errorMessage">
+        Verifique sua conexão e tente recarregar a página.
+      </p>
+      <button onclick="location.reload()">TENTAR NOVAMENTE</button>
+    </div>
+  </div>
+
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
